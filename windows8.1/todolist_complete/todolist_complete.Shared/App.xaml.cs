@@ -29,7 +29,9 @@ namespace todolist_complete
         public static MobileServiceClient MobileService = new MobileServiceClient(
             "https://todolist-complete.azurewebsites.net"
         );
-
+        //public static MobileServiceClient MobileService = new MobileServiceClient(
+        //    "http://localhost:51795"
+        //); 
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

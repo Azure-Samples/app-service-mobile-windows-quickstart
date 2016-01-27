@@ -14,6 +14,7 @@ using Windows.Security.Credentials;
 using Newtonsoft.Json.Linq;
 
 using Windows.Networking.PushNotifications;
+using System.Net.Http;
 
 namespace todolist_complete
 {
@@ -57,8 +58,19 @@ namespace todolist_complete
                 // Register for template push notifications.
                 await App.MobileService.GetPush()
                 .RegisterAsync(channel.Uri, templates);
+
+                // Define two new tags as a JSON array.
+                var body = new JArray();
+                body.Add("broadcast");
+                body.Add("test");
+
+                // Call the custom API '/api/updatetags/<installationid>' 
+                // with the JArray of tags.
+                var response = await App.MobileService
+                    .InvokeApiAsync("updatetags/" 
+                    + App.MobileService.InstallationId, body);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await new MessageDialog("Push registration failed.").ShowAsync();
             }
