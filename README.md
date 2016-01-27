@@ -1,6 +1,18 @@
 # App Service Mobile completed quickstart for Windows apps
-This repository contains Windows app projects based on the App Service Mobile Apps quickstart project, which you can download from the [Azure portal](https://portal.azure.com), which has been enhanced by the addition of offline sync, authentication, and push notification functionality. This demonstrates how to best integrate the various Mobile Apps features. To learn how to download the Windows quickstart app project from the portal, see [Create a Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started/). 
+This repository contains Windows app projects based on the App Service Mobile Apps quickstart project, which you can download from the [Azure portal](https://portal.azure.com), which has been enhanced by the addition of offline sync, authentication, and push notification functionality. This demonstrates how to best integrate the various Mobile Apps features. To learn how to download the Windows quickstart app project from the portal, see [Create a Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started/). This readme topic contains the following information to help you better understand the sample project.
 
++ [Overview](#overview)
++ [Configure the Mobile App backend](#configure-the-mobile-app-backend)
++ [Configure the Windows app](#configure-the-windows-app)
+	+ [Configure authentication](#configure-authentication)
+	+ [Configure push notifications](#configure-push-notifications)
++ [Running the app](#running-the-app)
++ [Implementation notes](#implementation-notes)
+	+ [Template push notification registration](#template-push-notification-registration)
+	+ [Client-added push notification tags](#client-added-push-notification-tags)
+	+ [Authenticate first](#authenticate-first)
+
+##Overview
 The projects in this repository are equivalent to downloading the quickstart Windows app project from the portal and then completing the following Mobile Apps tutorials:
 
 + [Enable offline sync for your Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started-offline-data/)
