@@ -24,9 +24,8 @@ The projects in this repository are equivalent to downloading the quickstart Win
 Before you can use this sample, you must have created and published a Mobile App backend project that supports  both authentication and push notifications (the backend supports offline sync by default). You can do this either by completing the previously indicated tutorials, or you can use one of the following Mobile Apps backend projects:
 
 + [.NET backend quickstart project for Mobile Apps](https://github.com/azure-samples/app-service-mobile-dotnet-backend-quickstart)
-<!--- [Node.js backend quickstart project for Mobile Apps](https://github.com/azure-samples/app-service-mobile-nodejs-backend-quickstart)-->
 
-The readme file in these projects will direct you to create a new Mobile App backend in App Service, then download, modify, and publish project to App Service.
+The readme file in this project will direct you to create a new Mobile App backend in App Service, then download, modify, and publish project to App Service.
 
 After you have your new Mobile App backend running, you can configure this project to connect to that new backend.
 
