@@ -27,11 +27,8 @@ namespace todolist_complete
         // This MobileServiceClient has been configured to communicate with the Azure Mobile App.
         // You're all set to start working with your Mobile App!
         public static MobileServiceClient MobileService = new MobileServiceClient(
-            "https://todolist-complete.azurewebsites.net"
+            "https://{your-mobile-app-backend}.azurewebsites.net"
         );
-        //public static MobileServiceClient MobileService = new MobileServiceClient(
-        //    "http://localhost:51795"
-        //); 
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
