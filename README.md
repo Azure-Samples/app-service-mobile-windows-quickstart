@@ -4,6 +4,7 @@ This repository contains Windows app projects based on the App Service Mobile Ap
 + [Overview](#overview)
 + [Configure the Mobile App backend](#configure-the-mobile-app-backend)
 + [Configure the Windows app](#configure-the-windows-app)
+	+ [Set the Mobile App backend URL](#set-the-mobile-app-backend-url)
 	+ [Configure authentication](#configure-authentication)
 	+ [Configure push notifications](#configure-push-notifications)
 + [Running the app](#running-the-app)
@@ -31,7 +32,12 @@ After you have your new Mobile App backend running, you can configure this proje
 
 ## Configure the Windows app
 
-The app project has offline sync support enabled, along with authentication and push notifications. However, you also need to configure authentication and push notifications before the app will run properly
+The app project has offline sync support enabled, along with authentication and push notifications. However, you need to configure the project, including authentication and push notifications, before the app will run properly.
+
+### Set the Mobile App backend URL
+
+The first thing you need to do is to set the URL of your Mobile App backend in the **MobileServiceClient** constructor. To do this, open the shared App.xaml.cs project file, locate the **MobileServiceClient** constructor and replace the URL with the URL of your Mobile App backend.
+ 
 
 ### Configure authentication
 
