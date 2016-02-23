@@ -49,8 +49,8 @@ The first thing you need to do is to set the URL of your Mobile App backend in t
 
 Although the SQLite NuGet packages are already installed in the project, you must make sure that the SQLite runtimes are also available on your local computer: 
 
-    * **Windows 8.1 Runtime:** Install [SQLite for Windows 8.1](http://go.microsoft.com/fwlink/?LinkID=716919).
-    * **Windows Phone 8.1:** Install [SQLite for Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkID=716920).
+* **Windows 8.1 Runtime:** Install [SQLite for Windows 8.1](http://go.microsoft.com/fwlink/?LinkID=716919).
+* **Windows Phone 8.1:** Install [SQLite for Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkID=716920).
 
 ### Configure authentication
 
