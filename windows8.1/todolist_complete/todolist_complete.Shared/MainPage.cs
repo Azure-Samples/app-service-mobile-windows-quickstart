@@ -40,7 +40,7 @@ namespace todolist_complete
             var toastTemplate =
                 @"<toast><visual><binding template=""ToastText02""><text id=""1"">"
                                 + @"New item:</text><text id=""2"">"
-                                + @"$(message)</text></binding></visual></toast>";
+                                + @"$(messageParam)</text></binding></visual></toast>";
 
             JObject templateBody = new JObject();
             templateBody["body"] = toastTemplate;
@@ -72,7 +72,7 @@ namespace todolist_complete
             }
             catch (Exception)
             {
-                await new MessageDialog("Push registration failed.").ShowAsync();
+                System.Diagnostics.Debug.WriteLine("Push registration failed");
             }
         }
 
@@ -98,8 +98,8 @@ namespace todolist_complete
             string message;
             bool success = false;
 
-            // This sample uses the Facebook provider.
-            var provider = "Facebook";
+            // This sample uses the Microsoft Account provider.
+            var provider = MobileServiceAuthenticationProvider.MicrosoftAccount;
 
             // Use the PasswordVault to securely store and access credentials.
             PasswordVault vault = new PasswordVault();
@@ -107,16 +107,16 @@ namespace todolist_complete
 
             try
             {
-                var credentials = vault.FindAllByResource(provider);
                 // Try to get an existing credential from the vault.
-                credential = vault.FindAllByResource(provider).FirstOrDefault();
+                credential = vault.FindAllByResource(provider.ToString()).FirstOrDefault();
             }
             catch (Exception)
             {
                 // When there is no matching resource an error occurs, which we ignore.
             }
 
-            // If we have a valid unexpired token, use it--otherwise sign-in again.
+            // If we have a valid and non-expired token, use it;
+            // otherwise, sign-in again.
             if (credential != null && !App.MobileService.IsTokenExpired(credential))
             {
                 // Create a user from the stored credentials.
@@ -127,31 +127,32 @@ namespace todolist_complete
                 // Set the user from the stored credentials.
                 App.MobileService.CurrentUser = user;
 
-                // Consider adding a check to determin if the token is 
-                // expired, as shown in http://aka.ms/jww5vp.
-
+                // Notify the user that cached credentials were used.
+                message = string.Format("Signed-in with cached credentials for user - {0}", user.UserId);
                 success = true;
-                message = string.Format("Cached credentials for user - {0}", user.UserId);
-
             }
             else
             {
                 try
                 {
                     // If we have an expired token, remove it.
-                    vault.Remove(credential);
+                    if (credential != null)
+                    {
+                        vault.Remove(credential);
+                    }
 
                     // Login with the identity provider.
                     user = await App.MobileService
                         .LoginAsync(provider);
 
                     // Create and store the user credentials.
-                    credential = new PasswordCredential(provider,
+                    credential = new PasswordCredential(provider.ToString(),
                         user.UserId, user.MobileServiceAuthenticationToken);
                     vault.Add(credential);
 
-                    success = true;
+                    // Welcome user and display login SID info.
                     message = string.Format("You are now logged in - {0}", user.UserId);
+                    success = true;
                 }
 
                 catch (InvalidOperationException)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "todolist_complete", "todolist_complete", "{F6C0526E-9FE6-4B07-B340-243315E431F1}"
 EndProject
@@ -58,7 +58,9 @@ Global
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|ARM.ActiveCfg = Debug|ARM
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|ARM.Build.0 = Debug|ARM
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|ARM.Deploy.0 = Debug|ARM
-		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x64.ActiveCfg = Debug|ARM
+		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x64.Build.0 = Debug|ARM
+		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x64.Deploy.0 = Debug|ARM
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x86.ActiveCfg = Debug|x86
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x86.Build.0 = Debug|x86
 		{BD50ECA0-7F46-41E1-A407-56821F327B5B}.Debug|x86.Deploy.0 = Debug|x86
