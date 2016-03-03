@@ -1,6 +1,6 @@
 ---
 services: app-service\mobile
-platforms: dotnet
+platforms: dotnet, windows
 author: ggailey777
 ---
 # App Service Mobile completed quickstart for Windows apps
