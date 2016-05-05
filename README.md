@@ -1,5 +1,5 @@
 ---
-services: app-service\mobile
+services: app-service\mobile, app-service
 platforms: dotnet, windows
 author: ggailey777
 ---
