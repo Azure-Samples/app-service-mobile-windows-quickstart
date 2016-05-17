@@ -4,7 +4,9 @@ platforms: dotnet, windows
 author: ggailey777
 ---
 # App Service Mobile Apps completed quickstart for Windows apps
-This repository contains Windows app projects based on the App Service Mobile Apps quickstart project, which you can download from the [Azure portal](https://portal.azure.com). These projects have been enhanced by the addition of offline sync, authentication, and push notification functionality. This demonstrates how to best integrate the various Mobile Apps features. To learn how to download the Windows quickstart app project from the portal, see [Create a Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started/). This readme topic contains the following information to help you run the sample app project and to better understand the design decisions.
+This repository contains Windows app projects based on the App Service Mobile Apps quickstart project, which you can download from the [Azure portal](https://portal.azure.com). These projects have been enhanced by the addition of offline sync, authentication, and push notification functionality. This demonstrates how to best integrate the various Mobile Apps features. To learn how to download the Windows quickstart app project from the portal, see [Create a Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started/). 
+
+This readme topic contains the following information to help you run the sample app project and to better understand the design decisions.
 
 + [Overview](#overview)
 + [Configure the Mobile App backend](#configure-the-mobile-app-backend)
@@ -26,6 +28,8 @@ The projects in this repository are equivalent to downloading the quickstart Win
 + [Enable offline sync for your Windows app](https://azure.microsoft.com/documentation/articles/app-service-mobile-windows-store-dotnet-get-started-offline-data/)
 + [Add authentication to your Windows app](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-windows-store-dotnet-get-started-users/)
 + [Add push notifications to your Windows app](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-windows-store-dotnet-get-started-push/) 
+
+The Universal Windows Platform (UWP) project for Windows 10 requires Visual Studio 2015.
 
 ## Configure the Mobile App backend
 
@@ -49,6 +53,7 @@ The first thing you need to do is to set the URL of your Mobile App backend in t
 
 Although the SQLite NuGet packages are already installed in the project, you must make sure that the SQLite runtimes are also available on your local computer: 
 
+* **Windows 10:** Install [SQLite for the Windows Universal Platform](http://sqlite.org/2016/sqlite-uwp-3120200.vsix).
 * **Windows 8.1 Runtime:** Install [SQLite for Windows 8.1](http://go.microsoft.com/fwlink/?LinkID=716919).
 * **Windows Phone 8.1:** Install [SQLite for Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkID=716920).
 

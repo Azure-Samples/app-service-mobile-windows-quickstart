@@ -176,3 +176,6 @@ FakesAssemblies/
 # Unneeded Cordova project folders
 [Pp]lugins/
 [Pp]latforms/
+
+Package.StoreAssociation.xml
+.vs
