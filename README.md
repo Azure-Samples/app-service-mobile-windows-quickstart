@@ -18,6 +18,7 @@ This readme topic contains the following information to help you run the sample 
 + [Running the app](#running-the-app)
 + [Implementation notes](#implementation-notes)
 	+ [Template push notification registration](#template-push-notification-registration)
+	+ [Push to an authenticated user](#push-to-an-authenticated-user)
 	+ [Client-added push notification tags](#client-added-push-notification-tags)
 	+ [Authenticate first](#authenticate-first)
 	+ [Check for expired tokens](#check-for-expired-tokens)
@@ -36,6 +37,7 @@ The Universal Windows Platform (UWP) project for Windows 10 requires Visual Stud
 Before you can use this sample, you must have created and published a Mobile App backend project that supports  both authentication and push notifications (the backend supports offline sync by default). You can do this either by completing the previously indicated tutorials, or you can use one of the following Mobile Apps backend projects:
 
 + [.NET backend quickstart project for Mobile Apps](https://github.com/azure-samples/app-service-mobile-dotnet-backend-quickstart)
++ [Node.js backend quickstart project for Mobile Apps](https://github.com/azure-samples/app-service-mobile-nodejs-backend-quickstart)
 
 The readme file in this project will direct you to create a new Mobile App backend in App Service, then download, modify, and publish project to App Service.
 
@@ -124,6 +126,9 @@ The original push notification tutorial used a native WNS registration. This sam
 
 
 For more information, see [How to: Register push templates to send cross-platform notifications](https://azure.microsoft.com/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/#how-to-register-push-templates-to-send-cross-platform-notifications).
+
+###Push to an authenticated user
+Because the user is authenticated before push registration occurs, the user ID is automatically added as a tag in the installation. The backend then uses this tag to send push notifications only to devices registered to the user doing the insert. For more information, see the readme file for the quickstart completed backend project. 
 
 ###Client-added push notification tags
 
